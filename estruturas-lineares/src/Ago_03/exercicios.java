@@ -2,6 +2,9 @@ package Ago_03;
 
 public class exercicios {
 
+    int num01 = RNG.randomNumberGenerator(0, 10);
+    int num02 = RNG.randomNumberGenerator(0, 10);
+
     public void exercicio01A(){
         int[][] arr = new int[3][10];
         for(int i = 0; i < arr.length; i++){
@@ -72,8 +75,7 @@ public class exercicios {
     }
 
     public void exercicio04_05(){
-        int num01 = RNG.randomNumberGenerator(0, 10);
-        int num02 = RNG.randomNumberGenerator(0, 10);
+
         int contador;
 
         double[][] arr = new double[num01][num02];
@@ -88,8 +90,6 @@ public class exercicios {
 
     public void exercicio06(){
 
-        int num01 = RNG.randomNumberGenerator(0, 10);
-        int num02 = RNG.randomNumberGenerator(0, 10);
         String numeros;
 
         double[][] arr = new double[num01][num02];
@@ -104,8 +104,6 @@ public class exercicios {
 
     public void exercicio07(){
 
-        int num01 = RNG.randomNumberGenerator(0, 10);
-        int num02 = RNG.randomNumberGenerator(0, 10);
         double maiorValor;
 
         double[][] arr = new double[num01][num02];
@@ -119,8 +117,6 @@ public class exercicios {
 
     public void exercicio08(){
 
-        int num01 = RNG.randomNumberGenerator(0, 10);
-        int num02 = RNG.randomNumberGenerator(0, 10);
         int soma;
 
         int[][] arr = new int[num01][num02];
@@ -134,8 +130,6 @@ public class exercicios {
 
     public void exercicio09(){
 
-        int num01 = RNG.randomNumberGenerator(0, 10);
-        int num02 = RNG.randomNumberGenerator(0, 10);
         int mediaValores;
 
         int[][] arr = new int[num01][num02];
@@ -145,5 +139,40 @@ public class exercicios {
             }
         }
         //return mediaValores;
+    }
+
+    public void exercicio10(){
+
+        int matriz;
+        int contador = 1;
+
+        int[][] arr = new int[2][2];
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                arr[i][j] = Teclado.leInt("Digite o " + contador + "º número da " + (i+1) + "ª linha: ");
+                contador++;
+            }
+        }
+        //return matriz;
+    }
+
+    public void exercicio11(){
+
+        int[][] arr = new int[num01][num02];
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                arr[i][j] = RNG.randomNumberGenerator(0, 100);
+            }
+        }
+
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                if(arr[i][j] % 2 == 0){
+                    arr[i][j] = 1;
+                }else{
+                    arr[i][j] = -1;
+                }
+            }
+        }
     }
 }
