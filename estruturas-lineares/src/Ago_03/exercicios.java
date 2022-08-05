@@ -2,8 +2,19 @@ package Ago_03;
 
 public class exercicios {
 
-    int num01 = RNG.randomNumberGenerator(0, 10);
-    int num02 = RNG.randomNumberGenerator(0, 10);
+    public double[][] criaMatriz(){
+        int num01 = RNG.randomNumberGenerator(1, 10);
+        int num02 = RNG.randomNumberGenerator(1, 10);
+
+        double[][] arr = new double[num01][num02];
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                arr[i][j] = RNG.randomNumberGenerator(0, 100);
+            }
+        }
+        return arr;
+    }
+
 
     public void exercicio01A(){
         int[][] arr = new int[3][10];
@@ -74,18 +85,8 @@ public class exercicios {
         //tá armazenado, o exercício não pede para printar
     }
 
-    public void exercicio04_05(){
-
-        int contador;
-
-        double[][] arr = new double[num01][num02];
-        for(int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr[i].length; j++){
-                arr[i][j] = RNG.randomNumberGenerator(0, 100);
-            }
-            contador = i;
-        }
-        //falta dar um return contador e devolver o numero de linhas
+    public int exercicio04_05(double[][] arr){
+       return arr.length;
     }
 
     public void exercicio06(){
